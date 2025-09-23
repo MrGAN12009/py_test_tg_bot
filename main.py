@@ -12,6 +12,7 @@ TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
+
 # Хэндлер команды /start
 @dp.message(Command("start"))
 async def start_handler(message: types.Message):
