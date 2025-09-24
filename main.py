@@ -52,7 +52,7 @@ async def post_message_to_manager(user_id: Optional[int], chat_id: Optional[int]
 @dp.message(Command("start"))
 async def start_handler(message: types.Message):
     logger.info(f"Пользователь {message.from_user.id} запустил /start")
-    await message.answer("Привет! Я бот с логированием 🤖")
+    await message.answer("Привет! Я бот с логированием 🤖123")
     await post_message_to_manager(message.from_user.id if message.from_user else None, message.chat.id if message.chat else None, "/start", "command")
 
 # Эхо-бот: повторяет все сообщения
